@@ -1,1 +1,91 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Spent on Each Type of Coffee</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        #title {
+            text-align: center;
+            color: #333;
+        }
+        #visualization {
+            display: flex;
+            justify-content: center;
+        }
+        .bar {
+            fill: #ff00ea;
+            transition: fill 0.3s;
+        }
+        .bar:hover {
+            fill: #FF5722;
+        }
+        .axis-label {
+            font-size: 14px;
+            fill: #333;
+            font-weight: bold;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 5px;
+            font: 14px sans-serif;
+            background: lightsteelblue;
+            border: 1px solid #333;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .legend {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff00f2;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title">Total Money Spent on Each Type of Coffee</h2>
+    <div id="visualization"></div>
+    <div class="buttons">
+        <button id="prev" class="button">Previous</button>
+        <button id="next" class="button">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
